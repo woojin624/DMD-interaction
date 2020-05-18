@@ -11,9 +11,58 @@ Quest 1.
 Benz, Volvo, Audi, Tesla. 
 
 */
-var cars = ['Tesla', 'Audi', 'Volvo', 'Benz'];
+// 방법1
+var cars = ["Tesla", "Audi", "Volvo", "Benz"];
+var max = cars.length;
+var result = "";
+for (var i = max - 1; i >= 0; i--) {
+  if (i < max - 1) {
+    result += ", ";
+  }
+  result += cars[i];
+  if (i === 0) {
+    result += ".";
+  }
+}
+console.log(result);
+
+//방법2
+result = "";
 cars.reverse();
-console.log(cars); // ['Benz', 'Volvo', 'Audi', 'Tesla']
+for (var i = 0; i < max; i++) {
+  if (i > 0) {
+    result += ", ";
+  }
+  result += cars[i];
+  if (i === max - 1) {
+    result += ".";
+  }
+}
+console.log(result);
+
+//방법3
+// for... in 반복문. (객체를 반복시킬 때 사용)
+/*
+for(var _원소순서(색인-key)_ in _배열(객체)_){
+
+}
+*/
+result = "";
+for (var i in cars) {
+  //console.log(i); // 0, 1, 2, 3 - 문자열 타입으로 값이 설정됨
+  //console.log(cars[i]); // 각 원소들의 값
+  i = parseInt(i, 10); // number 타입으로 치환. . parseInt(치환하려는 값, 진법);
+  if (i > 0) {
+    result += ", ";
+  }
+  result += cars[i];
+  if (i == max - 1) {
+    result += ".";
+  }
+}
+console.log(result);
+
+//console.log(cars); // ['Benz', 'Volvo', 'Audi', 'Tesla']
 
 /*
 Quest 2.
@@ -79,8 +128,8 @@ Quest 4.
 4. fruit 배열 객체의 요소 순서를 반대로 변경하고 console 에 배열이 출력되도록 작성합니다.
 */
 
-var fruit = ['Apple', 'Orange', 'Grape', 'Melon'];
-fruit.unshift('Mango');
-fruit.splice(3, 0, 'Cherry');
+var fruit = ["Apple", "Orange", "Grape", "Melon"];
+fruit.unshift("Mango");
+fruit.splice(3, 0, "Cherry");
 fruit.reverse();
 console.log(fruit); // ['Melon', 'Grape', 'Cherry', 'Orange', 'Apple', 'Mango']
