@@ -22,27 +22,53 @@ Quest 2.
 */
 // Answer 2.
 function getSize() {
-  winWidth = window.innerWidth;
-  winHeight = window.innerHeight;
+  var winWidth = window.innerWidth;
+  var winHeight = window.innerHeight;
+
+  return { winWidth: window.innerWidth, winHeight: winHeight }; //함수 호출 시 객체 반환
+  console.log("함수 반환 이후 코드는 동작하지 않음");
 }
 
-var winSize = getSize();
-
-console.log(
+var winSize = getSize(); // 함수에서 반환된 객체가 값으로 할당
+//console.log(winSize);
+var result =
   "윈도우 콘텐츠의 영역 width : " +
-    winWidth +
-    " px, height : " +
-    winHeight +
-    " px 입니다."
-);
+  winSize.winWidth +
+  " px, height : " +
+  winSize["winHeight"] +
+  " px 입니다.";
+
+console.log(result);
 
 /*
 Quest 3.
 1. id 가 'title' 인 요소에 'Hello World' 문자열이 포함되도록 작성합니다.
 */
 // Answer 3.
-document.getElementById("title").innerHTML = "Hello World";
+//document.getElementById("title").innerHTML = "Hello World";
 
+var titleEl = document.getElementById("title");
+titleEl.innerText = "Hello World"; // 요소에 텍스트만 기입
+titleEl.innerHTML = "Hello World"; // 요소에 텍스트 기입
+titleEl.innerHTML = "<span><b>Hello World</b></span>"; // 요소에 HTML형식의 텍스트 기입
+
+var html = "";
+html += '<div class="class">';
+html += "<span>";
+html += "안녕하세요";
+html += "</span>";
+for (var i = 0; i < 5; i++) {
+  html += "<span>";
+  html += "안녕하세요" + i;
+  html += "</span>";
+}
+html += "</div>";
+titleEl.innerHTML = html;
+console.log(html);
+
+var spanEl = document.createElement("span");
+spanEl.innerText = "Hello World";
+titleEl.appendChild(spanEl);
 /*
 Quest 4.
 1. class 가 'title' 인 요소들에 '안녕하세요.' 문자열이 포함되도록 작성합니다.
