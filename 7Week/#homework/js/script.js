@@ -74,10 +74,21 @@ Quest 4.
 1. class 가 'title' 인 요소들에 '안녕하세요.' 문자열이 포함되도록 작성합니다.
 */
 // Answer 4.
+/*
 var classTitle = document.getElementsByClassName("title");
 
 for (var i = 0; i < classTitle.length; i++) {
   classTitle[i].innerHTML = "안녕하세요.";
+}
+*/
+var classEls = document.getElementsByClassName("title"); // 찾아온 클래스 요소들이 배열로 반환.
+console.log(classEls);
+// getElements 로 찾아온 반환 요소들에 접근하기 위해서는 반복문을 사용해야 함.
+for (var i = 0; i < classEls.length; i++) {
+  var classEl = classEls[i]; // 각 요소 노드 접근
+  classEls[i].innerText = "안녕하세요."; // 새로운 문자열이 요소에 기입
+  classEls[i].innerHTML = "안녕하세요.";
+  classEl.innerText = "안녕하세요.";
 }
 /*
 Quest 5.
@@ -90,6 +101,7 @@ row class의 개수는 __개 입니다.
 ----------
 */
 // Answer 5.
+/*
 function getRowCount() {
   var rowClass = document.getElementsByClassName("row");
   return rowClass.length;
@@ -98,6 +110,18 @@ function getRowCount() {
 var rowCount = getRowCount();
 
 console.log("row class의 개수는 " + rowCount + "개 입니다."); //
+*/
+
+function getRowCount() {
+  var rowEls = document.getElementsByClassName("row");
+  var rowCount = rowEls.length;
+
+  return rowCount;
+}
+var rowCount = getRowCount();
+//console.log(rowCount);
+var result = "row class의 개수는 " + rowCount + " 개 입니다.";
+console.log(result);
 
 /*
 Quest 6.
@@ -106,7 +130,7 @@ Quest 6.
 3. 10 번의 출력 후 해당 기능이 실행되지 않도록 작성합니다.
 */
 // Answer 6.
-
+/*
 var count = 1;
 
 var tenHello = setInterval(function () {
@@ -116,6 +140,26 @@ var tenHello = setInterval(function () {
     clearInterval(tenHello);
   }
 }, 1000);
+*/
+
+var _count = 0;
+var _time = 100;
+function onCount() {
+  // 타이머 callback에 해당하는 핸들러 정의
+  _count++; // count 변수에 +1 연산.
+  console.log("hello", _count);
+  if (_count >= 10) {
+    clearInterval(timer); // 타이머의 초기화
+  }
+  // clearInterval(timer);
+}
+
+var timer = setInterval(onCount, _time);
+// var timer = setInterval(function(){
+//  code...
+//}, 1000);
+// setInterval(callback, time);
+// time - 1000 : 1초, 10000 : 10초  // ms단위
 
 /*
 Quest 7.
@@ -123,9 +167,16 @@ Quest 7.
 2. 1(순서) 요소의 위치를 x : 400px, y : 0px 로 좌표이동합니다.
 */
 // Answer 7.
+/*
 document.getElementById("scroll").classList.add("scroll");
 document.getElementById("scroll").scrollTo(400, 0);
-
+*/
+var scrollEl = document.getElementById("scroll");
+scrollEl.classList.add("scroll");
+//scrollEl.scrollTo(400, 0);
+setTimeout(function () {
+  scrollEl.scrollTo(400, 500);
+}, 10); // indet.html이 로드된 후 스크롤 이동이 되지 않을 수 있기 때문에 약간의 딜레이를 주는 방법
 /*
 Quest 8.
 1. id 가 'article' 인 요소를 찾습니다.
@@ -133,10 +184,19 @@ Quest 8.
 3. 1(순서) 요소의 자식 중 세번째 요소(.row)를 삭제합니다.
 */
 // Answer 8.
+/*
 var getArticle = document.getElementById("article");
 getArticle.firstElementChild.classList.add("red");
 var getRow = getArticle.getElementsByClassName("row");
 getArticle.removeChild(getRow[2]);
+*/
+
+var articleEl = document.getElementById("article");
+var rowEls = articleEl.getElementsByClassName("row");
+rowEls = articleEl.querySelectorAll(".row");
+//console.log(rowEls);
+rowEls[0].classList.add("red"); // 클래스를 추가하는 방법,
+articleEl.removeChild(rowEls[2]); // 자식 요소를 삭제하는 방법,
 
 /*
 Quest 9.
@@ -157,7 +217,7 @@ Quest 9.
 7. enterName 함수를 호출합니다.
 */
 // Answer 9.
-
+/*
 function enterName() {
   var name = prompt("이름을 입력해주세요.");
 
@@ -167,6 +227,23 @@ function enterName() {
     alert("이름을 정확히 입력해주세요.");
     enterName();
   } else if (name) {
+    document.write(name);
+  }
+}
+enterName();
+*/
+function enterName() {
+  var name = prompt("이름을 입력해주세요.");
+  //console.log(name);
+  if (name === null) {
+    console.log("입력이 취소되었습니다.");
+    return; // 이후의 코드가 동작하지 않도록 반환.
+  }
+  if (name === "") {
+    // 입력창에 빈 문자열 값이 있는 경우
+    alert("이름을 정확히 입력해주세요.");
+    enterName();
+  } else {
     document.write(name);
   }
 }
