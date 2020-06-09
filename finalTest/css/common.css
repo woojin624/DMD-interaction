@@ -1,0 +1,50 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+header > div {
+  margin-left: 40px;
+}
+header > ul {
+  margin-right: 40px;
+}
+header > ul > li {
+  margin: 0 28px;
+  font-weight: 400;
+}
+.social {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+}
+.social > a {
+  margin: 10px;
+}
+.side-line {
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+  background: #fff;
+  width: 1px;
+  height: 240px;
+}
+.centerCircle {
+  background: #fff;
+
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+}
