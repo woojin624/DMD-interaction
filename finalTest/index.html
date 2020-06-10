@@ -18,45 +18,66 @@
     />
   </head>
   <body class="fbr">
-    <header>
-      <div>
-        <img src="./images/icon-logo.png" width="46" height="51" alt="logo" />
+    <!-- base start -->
+    <section id="base">
+      <header>
+        <div>
+          <img src="./images/icon-logo.png" width="46" height="51" alt="logo" />
+        </div>
+        <ul class="fbr">
+          <li id="home">HOME</li>
+          <li id="profile">PROFILE</li>
+          <li id="albums">ALBUMS</li>
+          <li id="videos">VIDEOS</li>
+          <li id="gallery">GALLERY</li>
+        </ul>
+      </header>
+      <div class="social">
+        <a href="https://twitter.com/asapmob" target="_blank">
+          <img
+            src="./images/icon-twitter.png"
+            width="25"
+            height="25"
+            alt="icon-twitter"
+          />
+        </a>
+        <a href="https://www.facebook.com/asapmobofficial" target="_blank"
+          ><img
+            src="./images/icon-facebook.png"
+            width="25"
+            height="25"
+            alt="icon-facebook"
+        /></a>
+        <a href="https://www.instagram.com/asaprocky/" target="_blank"
+          ><img
+            src="./images/icon-instagram.png"
+            width="25"
+            height="25"
+            alt="icon-instagram"
+        /></a>
       </div>
-      <ul class="fbr">
-        <li>HOME</li>
-        <li>PROFILE</li>
-        <li>ALBUMS</li>
-        <li>VIDEOS</li>
-        <li>GALLERY</li>
-      </ul>
-    </header>
-    <div class="social">
-      <a href="https://twitter.com/asapmob" target="_blank">
-        <img
-          src="./images/icon-twitter.png"
-          width="25"
-          height="25"
-          alt="icon-twitter"
-        />
-      </a>
-      <a href="https://www.facebook.com/asapmobofficial" target="_blank"
-        ><img
-          src="./images/icon-facebook.png"
-          width="25"
-          height="25"
-          alt="icon-facebook"
-      /></a>
-      <a href="https://www.instagram.com/asaprocky/" target="_blank"
-        ><img
-          src="./images/icon-instagram.png"
-          width="25"
-          height="25"
-          alt="icon-instagram"
-      /></a>
-    </div>
-    <div class="side-line"></div>
-    <div class="centerCircle"></div>
+      <div class="side-line"></div>
+      <div class="centerCircle"></div>
+    </section>
 
-    <!-- 여기까지 베이스 -->
+    <!-- base end -->
+
+    <!-- circle start -->
+    <div class="backCircle fbr">
+      <div id="circle1">
+        <svg>
+          <circle cx="50%" cy="50%" r="67px"></circle>
+        </svg>
+      </div>
+      <div id="circle2"></div>
+    </div>
+    <!-- circle end -->
+
+    <!-- main start -->
+    <section id="main">
+      <img src="./images/rocky-main.png" alt="rocky" />
+    </section>
+
+    <!-- main end -->
   </body>
 </html>

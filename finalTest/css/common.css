@@ -3,8 +3,13 @@ body {
   height: 100vh;
   background-color: black;
   position: relative;
+  overflow: hidden;
 }
-
+section#base {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 header {
   position: absolute;
   top: 0;
@@ -14,37 +19,59 @@ header {
   justify-content: space-between;
   align-items: center;
   color: white;
+  z-index: 9999;
 }
 header > div {
   margin-left: 40px;
+  cursor: pointer;
 }
 header > ul {
   margin-right: 40px;
 }
 header > ul > li {
-  margin: 0 28px;
+  padding: 10px 28px;
   font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.social {
+header > ul > li:hover {
+  font-weight: 600;
+  color: rgb(255, 241, 218);
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 249, 68),
+    0 0 5px rgb(255, 222, 133);
+}
+div.social {
   position: absolute;
   bottom: 40px;
   right: 60px;
+  z-index: 9999;
 }
-.social > a {
+div.social > a {
   margin: 10px;
 }
-.side-line {
+div.side-line {
   position: absolute;
   bottom: 40px;
   left: 80px;
   background: #fff;
   width: 1px;
   height: 240px;
+  z-index: 9999;
 }
-.centerCircle {
-  background: #fff;
-
-  width: 600px;
-  height: 600px;
+div.centerCircle {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(85, 85, 85, 0.5) 35%,
+    rgba(0, 0, 0, 0) 55%
+  );
+  width: 65vw;
+  height: 65vw;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
