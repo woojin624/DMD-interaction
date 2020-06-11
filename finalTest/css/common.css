@@ -68,10 +68,30 @@ div.centerCircle {
   );
   width: 65vw;
   height: 65vw;
+  min-width: 760px;
+  min-height: 760px;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+div.backCircle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+div.backCircle > div#circle1 {
+  width: 100vw;
+  height: 100vw;
+}
+div.backCircle > div#circle1 > svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: aliceblue;
+  stroke-width: 1px;
+  stroke-dasharray: 370;
+  stroke-dashoffset: 100;
 }
