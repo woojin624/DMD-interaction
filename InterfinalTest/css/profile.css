@@ -1,0 +1,41 @@
+section#profile {
+    width: 1280px;
+    display: flex;
+}
+section#profile > div{
+    width: 640px;
+}
+section#profile > .left {
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#profile > .left > .title {
+    font-size: 80px;
+    font-family: 'Tinos', serif;
+    margin-bottom: 60px;
+}
+section#profile > .left >  .sub {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+section#profile > .left > .con-1{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+section#profile > .right > .img-wrap {
+    width: 600px; height: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 50px;
+ }
+section#profile > .right > .img-wrap > img {
+    width: 500px; height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+}
+/* section#profile{display: none;} */

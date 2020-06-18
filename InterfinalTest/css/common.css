@@ -1,38 +1,21 @@
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100vw; height: 100vh;
   background-color: black;
-  position: relative;
-  overflow: hidden;
+  position: relative; overflow: hidden;
 }
 section#base {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: absolute; width: 100%; height: 100%;
 }
 header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  z-index: 9999;
+  position: absolute; top: 0; width: 100%; height: 80px;
+  display: flex; justify-content: space-between;
+  align-items: center; color: white; z-index: 9999;
 }
-header > div {
-  margin-left: 40px;
-  cursor: pointer;
-}
-header > ul {
-  margin-right: 40px;
-}
-header > ul > li {
-  padding: 10px 28px;
-  font-weight: 400;
-  cursor: pointer;
-  transition: all 0.3s ease;
+header > div { margin-left: 40px; cursor: pointer; }
+header > ul { margin-right: 40px; }
+header > ul > li { 
+  padding: 10px 28px; font-weight: 400;
+  cursor: pointer; transition: all 0.3s ease;
 }
 header > ul > li:hover {
   font-weight: 600;
@@ -41,22 +24,12 @@ header > ul > li:hover {
     0 0 5px rgb(255, 222, 133);
 }
 div.social {
-  position: absolute;
-  bottom: 40px;
-  right: 60px;
-  z-index: 9999;
+  position: absolute; bottom: 40px; right: 60px; z-index: 9999;
 }
-div.social > a {
-  margin: 10px;
-}
+div.social > a { margin: 10px; }
 div.side-line {
-  position: absolute;
-  bottom: 40px;
-  left: 80px;
-  background: #fff;
-  width: 1px;
-  height: 240px;
-  z-index: 9999;
+  position: absolute; bottom: 40px; left: 80px;
+  background: #fff; width: 1px; height: 240px; z-index: 9999;
 }
 div.centerCircle {
   background: rgb(255, 255, 255);
@@ -76,22 +49,4 @@ div.centerCircle {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-}
-div.backCircle {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-div.backCircle > div#circle1 {
-  width: 100vw;
-  height: 100vw;
-}
-div.backCircle > div#circle1 > svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: aliceblue;
-  stroke-width: 1px;
-  stroke-dasharray: 370;
-  stroke-dashoffset: 100;
 }
