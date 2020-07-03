@@ -12,24 +12,26 @@
   <link rel="stylesheet" href="./css/albums.css" />
   <link rel="stylesheet" href="./css/videos.css" />
   <link rel="stylesheet" href="./css/gallery.css" />
+  <link rel="stylesheet" href="./css/backCircle.css" />
   <script defer src="js/navCon.js"></script>
+  <script defer src="js/album.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
 </head>
 
 <body class="fbr">
   <!-- base start -->
-  <section id="base">
+  <div id="base">
     <header>
       <div>
         <img src="./images/icon-logo.png" width="46" height="51" alt="logo" />
       </div>
       <ul class="fbr">
-        <li id="home">HOME</li>
-        <li id="profile">PROFILE</li>
-        <li id="albums">ALBUMS</li>
-        <li id="videos">VIDEOS</li>
-        <li id="gallery">GALLERY</li>
+        <li id="home-btn">HOME</li>
+        <li id="profile-btn">PROFILE</li>
+        <li id="albums-btn">ALBUMS</li>
+        <li id="videos-btn">VIDEOS</li>
+        <li id="gallery-btn">GALLERY</li>
       </ul>
     </header>
     <div class="social">
@@ -43,12 +45,19 @@
     </div>
     <div class="side-line"></div>
     <div class="centerCircle"></div>
-  </section>
+  </div>
 
   <!-- base end -->
 
   <!-- circle start -->
-
+  <div class="backCircle fbr">
+    <div id="circle1" class="fbr">
+      <div class="circle"></div>
+    </div>
+    <div id="circle2" class="fbr">
+      <div class="circle"></div>
+    </div>
+  </div>
   <!-- circle end -->
 
   <!-- main start -->
@@ -58,16 +67,9 @@
     <p class="title_asap">A$AP</p>
     <p class="title_rocky">ROCKY</p>
     <!-- </div> -->
-    <div class="backCircle fbr">
-      <div id="circle1" class="fbr">
-        <div class="circle"></div>
-      </div>
-      <div id="circle2" class="fbr">
-        <div class="circle"></div>
-      </div>
-    </div>
   </section>
   <!-- main end -->
+  <!-- profile start -->
   <section id="profile">
     <div class="left">
       <p class="title">A$AP ROCKY</p>
@@ -95,6 +97,185 @@
       </div>
     </div>
   </section>
+  <!-- profile end -->
+
+  <!-- album start -->
+  <section id="albums">
+    <div class="albums-wrap">
+      <div class="tray-wrap">
+        <div class="tray first">
+          <div class="album">
+            <div class="top">
+            </div>
+            <div class="bottom">
+            </div>
+            <div class="back">
+            </div>
+            <div class="front">
+            </div>
+            <div class="paper">
+              <div class="cd">
+              </div>
+              <div class="playBtn"><img src="./images/AlbumPlayBtn.png" alt=""></div>
+              <div class="pauseBtn"><img src="./images/PauseBtn.png" alt=""></div>
+            </div>
+            <div class="left">
+            </div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+        <div class="tray second">
+          <div class="album">
+            <div class="top">
+            </div>
+            <div class="bottom">
+            </div>
+            <div class="back">
+            </div>
+            <div class="front">
+            </div>
+            <div class="paper">
+              <div class="cd">
+              </div>
+              <div class="playBtn"><img src="./images/AlbumPlayBtn.png" alt=""></div>
+              <div class="pauseBtn"><img src="./images/PauseBtn.png" alt=""></div>
+            </div>
+            <div class="left">
+            </div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+        <div class="tray third">
+          <div class="album">
+            <div class="top">
+            </div>
+            <div class="bottom">
+            </div>
+            <div class="back">
+            </div>
+            <div class="front">
+            </div>
+            <div class="paper">
+              <div class="cd">
+              </div>
+              <div class="playBtn"><img src="./images/AlbumPlayBtn.png" alt=""></div>
+              <div class="pauseBtn"><img src="./images/PauseBtn.png" alt=""></div>
+            </div>
+            <div class="left">
+            </div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+        <div class="tray fourth">
+          <div class="album">
+            <div class="top">
+            </div>
+            <div class="bottom">
+            </div>
+            <div class="back">
+            </div>
+            <div class="front">
+            </div>
+            <div class="paper">
+              <div class="cd">
+              </div>
+              <div class="playBtn"><img src="./images/AlbumPlayBtn.png" alt=""></div>
+              <div class="pauseBtn"><img src="./images/PauseBtn.png" alt=""></div>
+            </div>
+            <div class="left">
+            </div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+        <div class="tray fifth">
+          <div class="album">
+            <div class="top">
+            </div>
+            <div class="bottom">
+            </div>
+            <div class="back">
+            </div>
+            <div class="front">
+            </div>
+            <div class="paper">
+              <div class="cd">
+              </div>
+              <div class="playBtn"><img src="./images/AlbumPlayBtn.png" alt=""></div>
+              <div class="pauseBtn"><img src="./images/PauseBtn.png" alt=""></div>
+            </div>
+            <div class="left">
+            </div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prev-btn">
+      <div class="arrow-top"></div>
+      <div class="arrow-bottom"></div>
+    </div>
+    <div class="next-btn">
+      <div class="arrow-top"></div>
+      <div class="arrow-bottom"></div>
+    </div>
+  </section>
+
+  <!-- album end -->
+
+  <!-- video start -->
+  <section id="video">
+
+  </section>
+
+  <!-- video end -->
+
+  <!-- gallery start -->
+  <section id="gallery">
+    <div class="img-wrap">
+      <div class="img-line">
+        <img src="./images/gallery/101.jpg" alt="">
+        <img src="./images/gallery/102.jpg" alt="">
+        <img src="./images/gallery/103.jpg" alt="">
+      </div>
+      <div class="img-line">
+        <img src="./images/gallery/201.jpg" alt="">
+        <img src="./images/gallery/202.jpg" alt="">
+        <img src="./images/gallery/203.jpg" alt="">
+        <img src="./images/gallery/204.jpg" alt="">
+        <img src="./images/gallery/205.jpg" alt="">
+      </div>
+      <div class="img-line">
+        <img src="./images/gallery/301.jpg" alt="">
+        <img src="./images/gallery/302.jpg" alt="">
+        <img src="./images/gallery/303.jpg" alt="">
+      </div>
+      <div class="img-line">
+        <img src="./images/gallery/401.jpg" alt="">
+        <img src="./images/gallery/402.jpg" alt="">
+        <img src="./images/gallery/403.png" alt="">
+      </div>
+      <div class="img-line">
+        <img src="./images/gallery/501.png" alt="">
+        <img src="./images/gallery/502.jpg" alt="">
+      </div>
+      <div class="img-line">
+        <img src="./images/gallery/601.jpg" alt="">
+        <img src="./images/gallery/602.jpg" alt="">
+        <img src="./images/gallery/603.jpg" alt="">
+      </div>
+      <div class="img-line">
+        <img src="./images/gallery/701.jpg" alt="">
+        <img src="./images/gallery/702.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  
+  <!-- gallery end -->
 </body>
 
 </html>

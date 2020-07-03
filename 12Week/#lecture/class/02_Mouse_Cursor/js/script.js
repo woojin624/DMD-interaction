@@ -37,7 +37,7 @@ function onMouseMove(e) {
     gsap.to(cursorBGEl, { top: posY, left: posX, duration: 0.3, ease: "sine.out" });
     gsap.to(progressEl, { top: posY, left: posX, duration: 0.25, ease: "sine.out" });
 }
-function onMouseEnterList(e) {
+function onMouseEnterList(e) {ㄴ
     console.log("enter");
     if (!cursorBGEl.classList.contains("active")) {
         cursorBGEl.classList.add("active");

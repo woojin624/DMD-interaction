@@ -1,0 +1,134 @@
+section#albums{
+    position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%; visibility: hidden;
+}
+section#albums > .albums-wrap {
+    display: flex; justify-content: center;
+    transform-style: preserve-3d; perspective: 2000px; 
+    perspective-origin: 50% 50%;
+}
+section#albums > .albums-wrap > .tray-wrap {
+    width: 1200px; height: 1200px; background: none; border-radius: 50%;
+    perspective: 5000px; 
+    perspective-origin: 50% 50%; position: absolute; top: 0%; left: 50%; 
+    transform-style: preserve-3d; transition: 0.5s ease;
+    transform: translate(-50%, -14%) rotateX(102deg) rotateZ(00deg) translateZ(0px);
+}
+section#albums > .albums-wrap > .tray-wrap > .tray {
+    width: 1200px; height: 1200px; background: none; border-radius: 50%;
+    /* perspective: 5000px; */
+    perspective-origin: 50% 50%; position: absolute; top: 0%; left: 50%; 
+    transform-style: preserve-3d; 
+    transform: translate(-50%, -14%)rotateZ(00deg) translateZ(0px);
+}
+section#albums > .albums-wrap > .tray-wrap > .first {transform: translate(-50%, 0) rotateZ(00deg); }
+section#albums > .albums-wrap > .tray-wrap > .second { transform:translate(-50%, 0) rotateZ(72deg); }
+section#albums > .albums-wrap > .tray-wrap > .third { transform: translate(-50%, 0) rotateZ(144deg); }
+section#albums > .albums-wrap > .tray-wrap > .fourth { transform:translate(-50%, 0) rotateZ(216deg); }
+section#albums > .albums-wrap > .tray-wrap > .fifth { transform:translate(-50%, 0) rotateZ(288deg); }
+section#albums > .albums-wrap > .tray-wrap > .tray > .album {
+    position: absolute; width: 400px; height: 400px; top:90%; left: 50%; transform:translate(-50%, -50%) rotateX(3deg);
+    margin: 50px auto; transition: 0.5s; transform-style: preserve-3d;
+}
+.album div {
+    position: absolute; opacity: 1; 
+}
+
+.album .top { width: 400px; height: 20px; transform: translateY(190px) translateZ(200px) ; background: red; }
+.album .bottom { width: 400px; height: 20px; transform: translateY(190px) translateZ(-200px) rotateY(180deg);  background: blue; }
+.album .left { width: 400px; height: 20px; transform: rotateY(-90deg) translateY(190px) translateZ(200px);  background: green; }
+.album .right { width: 400px; height: 20px; transform: rotateY(90deg) translateY(190px) translateZ(200px);  background: yellow;  }
+.album .back { width: 400px; height: 400px; transform: rotateX(90deg) rotateZ(180deg) translateZ(10px);  background: white; }
+.album .front { width: 400px; height: 400px; transform: rotateX(-90deg) translateZ(10px);  background: coral; transform-origin: left; transition: 0.4s;}
+/* .album > .paper .cd { width: 400px; height: 400px; transform: rotateX(-90deg) translateZ(2px); transition: 0.4s; display: flex; justify-content: center; align-items: center;} */
+.album > .paper .cd { width: 400px; height: 400px; transition: 0.4s;}
+.album .paper { width: 400px; height: 400px; transform: rotateX(-90deg) translateZ(1px); background: coral; }
+section#albums > .albums-wrap > .tray-wrap > .tray > .album > .top { background: center / cover no-repeat url(../images/albumSideV.jpg)}
+section#albums > .albums-wrap > .tray-wrap > .tray > .album > .bottom { background: center / cover no-repeat url(../images/albumSideV.jpg)}
+section#albums > .albums-wrap > .tray-wrap > .tray > .album > .left { background: center / cover no-repeat url(../images/albumSideH.jpg)}
+section#albums > .albums-wrap > .tray-wrap > .tray > .album > .right { background: center / cover no-repeat url(../images/albumSideH.jpg)}
+
+section#albums > .albums-wrap > .tray-wrap > .first > .album > .front { background: center / cover no-repeat url(../images/albumCover1.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .first > .album > .back {background: center / cover no-repeat url(../images/albumCover1.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .first > .album > .paper {background: center / cover no-repeat url(../images/albumBack1.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .first > .album > .paper > .playBtn {position: absolute; left: 50%; top: 50%; transform: translate(-45%, -47%); z-index: 999;}
+section#albums > .albums-wrap > .tray-wrap > .first > .album > .paper > .playBtn > img {width: 39px;}
+section#albums > .albums-wrap > .tray-wrap > .first > .album > .paper > .pauseBtn {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -47%); z-index: 999; display: none;}
+section#albums > .albums-wrap > .tray-wrap > .first > .album > .paper > .pauseBtn > img {width: 35px;}
+section#albums > .albums-wrap > .tray-wrap > .first > .album > .paper > .cd {background: center / 90% 90% no-repeat url(../images/albumCD1.png);}
+
+section#albums > .albums-wrap > .tray-wrap > .second > .album > .front { background: center / cover no-repeat url(../images/albumCover2.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .second > .album > .back {background: center / cover no-repeat url(../images/albumCover2.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .second > .album > .paper {background: center / cover no-repeat url(../images/albumBack2.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .second > .album > .paper > .playBtn {position: absolute; left: 50%; top: 50%; transform: translate(-45%, -47%);}
+section#albums > .albums-wrap > .tray-wrap > .second > .album > .paper > .playBtn > img {width: 39px;}
+section#albums > .albums-wrap > .tray-wrap > .second > .album > .paper > .pauseBtn {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -47%); display: none;}
+section#albums > .albums-wrap > .tray-wrap > .second > .album > .paper > .pauseBtn > img {width: 35px;}
+section#albums > .albums-wrap > .tray-wrap > .second > .album > .paper >  .cd {background: center / 90% 90% no-repeat url(../images/albumCD2.png);}
+
+section#albums > .albums-wrap > .tray-wrap > .third > .album > .front { background: center / cover no-repeat url(../images/albumCover3.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .third > .album > .back {background: center / cover no-repeat url(../images/albumCover3.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .third > .album > .paper {background: center / cover no-repeat url(../images/albumBack3.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .third > .album > .paper > .playBtn {position: absolute; left: 50%; top: 50%; transform: translate(-45%, -47%);}
+section#albums > .albums-wrap > .tray-wrap > .third > .album > .paper > .playBtn > img {width: 39px;}
+section#albums > .albums-wrap > .tray-wrap > .third > .album > .paper > .pauseBtn {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -47%); display: none;}
+section#albums > .albums-wrap > .tray-wrap > .third > .album > .paper > .pauseBtn > img {width: 35px;}
+section#albums > .albums-wrap > .tray-wrap > .third > .album > .paper >  .cd {background: center / 90% 90% no-repeat url(../images/albumCD3.png);}
+
+section#albums > .albums-wrap > .tray-wrap > .fourth > .album > .front { background: center / cover no-repeat url(../images/albumCover4.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .fourth > .album > .back {background: center / cover no-repeat url(../images/albumCover4.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .fourth > .album > .paper {background: center / cover no-repeat url(../images/albumBack4.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .fourth > .album > .paper > .playBtn {position: absolute; left: 50%; top: 50%; transform: translate(-45%, -47%);}
+section#albums > .albums-wrap > .tray-wrap > .fourth > .album > .paper > .playBtn > img {width: 39px;}
+section#albums > .albums-wrap > .tray-wrap > .fourth > .album > .paper > .pauseBtn {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -47%); display: none;}
+section#albums > .albums-wrap > .tray-wrap > .fourth > .album > .paper > .pauseBtn > img {width: 35px;}
+section#albums > .albums-wrap > .tray-wrap > .fourth > .album > .paper >  .cd {background: center / 90% 90% no-repeat url(../images/albumCD4.png);}
+
+section#albums > .albums-wrap > .tray-wrap > .fifth > .album > .front { background: center / cover no-repeat url(../images/albumCover5.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .fifth > .album > .back {background: center / cover no-repeat url(../images/albumCover5.jpg);}
+section#albums > .albums-wrap > .tray-wrap > .fifth > .album > .paper {background: center / cover no-repeat url(../images/albumBack5.png);}
+section#albums > .albums-wrap > .tray-wrap > .fifth > .album > .paper > .playBtn {position: absolute; left: 50%; top: 50%; transform: translate(-45%, -47%);}
+section#albums > .albums-wrap > .tray-wrap > .fifth > .album > .paper > .playBtn > img {width: 39px;}
+section#albums > .albums-wrap > .tray-wrap > .fifth > .album > .paper > .pauseBtn {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -47%); display: none;}
+section#albums > .albums-wrap > .tray-wrap > .fifth > .album > .paper > .pauseBtn > img {width: 35px;}
+section#albums > .albums-wrap > .tray-wrap > .fifth > .album > .paper >  .cd {background: center / 90% 90% no-repeat url(../images/albumCD5.png);}
+
+section#albums > .prev-btn {
+    width: 100px; height: 100px; position: absolute;
+    background: rgba(255, 255, 255, 0.1); border-radius: 50px;
+    left: 2%; top: 50%; transform: translate(0, -50%);
+    cursor: pointer;
+}
+section#albums > .prev-btn > .arrow-top {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 48%; top: 40%; transform: translate(-50%, -50%) rotate(-45deg);
+}
+section#albums > .prev-btn > .arrow-bottom {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 48%; top: 60%; transform: translate(-50%, -50%) rotate(45deg);
+}
+section#albums > .next-btn {
+    width: 100px; height: 100px; position: absolute;
+    background: rgba(255, 255, 255, 0.1); border-radius: 50px;
+    right: 2%; top: 50%; transform: translate(0, -50%);
+    cursor: pointer;
+}
+section#albums > .next-btn > .arrow-top {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 52%; top: 40%; transform: translate(-50%, -50%) rotate(45deg);
+}
+section#albums > .next-btn > .arrow-bottom {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 52%; top: 60%; transform: translate(-50%, -50%) rotate(-45deg);
+}
+section#albums > div.albums-wrap > div.tray-wrap > .tray > .album> .albumOpen {transform: rotateX(-90deg) rotateY(-110deg) translateZ(0px);}
+
+.rotateCD {
+    animation: rotateCD 0.5s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotateCD{
+	100% {
+    	transform: rotate(360deg);
+    }
+}
