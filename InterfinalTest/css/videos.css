@@ -1,1 +1,91 @@
-section#video {position: fixed; top: 0; left: 0; visibility: hidden;}
+section.video {
+    position: fixed; width: 100%; height: 100%; top: 0; left: 0; 
+    visibility: hidden; opacity: 0; transition: 0.5s;}
+section.video > .video-wrap {
+    position: absolute; width: 1480px; height: 100vh; left: 50%; top: 50%; 
+    transform: translate(-50%, -50%); transition: 0.5s;}
+section.video > .video-wrap > .video-mask{
+    position: absolute;
+    width: 0px; 
+    height: 2980px;
+    /* background: rgba(45, 251, 33, 0.4); */
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    clip-path: ellipse(22.4% 50% at 50% 50%);
+    overflow: hidden; transition: 0.5s;
+}
+section.video > .video-wrap > .video-mask > .box-wrap {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 1440px; height: 100vh; transition: 0.3s ease-in-out;
+}
+section.video > .video-wrap > .video-mask > .box-wrap > div {
+    width: 720px; height: 405px;
+    position: absolute; top: 50%; transform: translate(-50%, -50%);
+    background: blueviolet;
+}
+section.video > .video-wrap > .video-mask > .box-wrap > div.test-box1 {left: 50%; }
+section.video > .video-wrap > .video-mask > .box-wrap > div.test-box2 {left: 107%; }
+section.video > .video-wrap > .video-mask > .box-wrap > div.test-box3 {left: 164%; }
+
+section.video > .prev-btn {
+    width: 100px; height: 100px; position: absolute;
+    background: rgba(255, 255, 255, 0.1); border-radius: 50px;
+    left: 2%; top: 50%; transform: translate(0, -50%);
+    cursor: pointer; transition: 0.4s;
+}
+section.video > .prev-btn > .arrow-top {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 48%; top: 40%; 
+    transform: translate(-50%, -50%) rotate(-45deg); transition: 0.4s;
+}
+section.video > .prev-btn > .arrow-bottom {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 48%; top: 60%; 
+    transform: translate(-50%, -50%) rotate(45deg); transition: 0.4s;
+}
+section.video > .prev-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+
+}
+section.video > .prev-btn:hover > .arrow-top {
+    background: black;
+}
+section.video > .prev-btn:hover > .arrow-bottom {
+    background: black;
+}
+section.video > .next-btn {
+    width: 100px; height: 100px; position: absolute;
+    background: rgba(255, 255, 255, 0.1); border-radius: 50px;
+    right: 2%; top: 50%; transform: translate(0, -50%);
+    cursor: pointer; transition: 0.4s;
+}
+section.video > .next-btn > .arrow-top {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 52%; top: 40%; 
+    transform: translate(-50%, -50%) rotate(45deg); transition: 0.4s;
+}
+section.video > .next-btn > .arrow-bottom {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 52%; top: 60%; 
+    transform: translate(-50%, -50%) rotate(-45deg); transition: 0.4s;
+}
+section.video > .next-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+
+}
+section.video > .next-btn:hover > .arrow-top {
+    background: black;
+}
+section.video > .next-btn:hover > .arrow-bottom {
+    background: black;
+}
+/* 액티브 활성화 */
+section.video.active {position: fixed; top: 0; left: 0; visibility: visible; opacity: 1;}
+section.video.active > .video-wrap > .video-mask{
+    position: absolute;
+    width: 2630px; 
+    height: 2980px;
+    /* background: rgba(45, 251, 33, 0.4); */
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    clip-path: ellipse(22.4% 50% at 50% 50%);
+    overflow: hidden; transition: 1.5s ease-in; transition-delay: 1s;
+}

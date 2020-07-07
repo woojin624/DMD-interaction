@@ -13,8 +13,12 @@
   <link rel="stylesheet" href="./css/videos.css" />
   <link rel="stylesheet" href="./css/gallery.css" />
   <link rel="stylesheet" href="./css/backCircle.css" />
-  <script defer src="js/navCon.js"></script>
+  <link rel="stylesheet" href="./css/cursor.css" />
   <script defer src="js/album.js"></script>
+  <script defer src="js/videos.js"></script>
+  <script defer src="js/navCon.js"></script>
+  <script defer src="js/cursor.js"></script>
+  <script defer src="js/gallery.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
 </head>
@@ -61,7 +65,7 @@
   <!-- circle end -->
 
   <!-- main start -->
-  <section id="main">
+  <section class="main active">
     <img src="./images/rocky-main.png" alt="rocky" />
     <!-- <div class="main_title"> -->
     <p class="title_asap">A$AP</p>
@@ -70,7 +74,7 @@
   </section>
   <!-- main end -->
   <!-- profile start -->
-  <section id="profile">
+  <section class="profile">
     <div class="left">
       <p class="title">A$AP ROCKY</p>
       <p class="sub">
@@ -100,7 +104,8 @@
   <!-- profile end -->
 
   <!-- album start -->
-  <section id="albums">
+  <section class="albums">
+    <p><i>Click Albums and Play</i></p>
     <div class="albums-wrap">
       <div class="tray-wrap">
         <div class="tray first">
@@ -228,54 +233,115 @@
   <!-- album end -->
 
   <!-- video start -->
-  <section id="video">
-
+  <section class="video">
+    <div class="video-wrap">
+      <div class="video-mask">
+        <div class="box-wrap">
+          <div class="test-box1">
+            <!-- <iframe width="720" height="405" src="https://www.youtube.com/embed/kzlHWkIM6g0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          </div>
+          <div class="test-box2">
+            <!-- <iframe width="720" height="405" src="https://www.youtube.com/embed/ffOlQEQtj8s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          </div>
+          <div class="test-box3">
+            <!-- <iframe width="720" height="405" src="https://www.youtube.com/embed/ydz8b1PRgVs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prev-btn">
+      <div class="arrow-top"></div>
+      <div class="arrow-bottom"></div>
+    </div>
+    <div class="next-btn">
+      <div class="arrow-top"></div>
+      <div class="arrow-bottom"></div>
+    </div>
   </section>
 
   <!-- video end -->
 
   <!-- gallery start -->
-  <section id="gallery">
-    <div class="img-wrap">
-      <div class="img-line">
-        <img src="./images/gallery/101.jpg" alt="">
-        <img src="./images/gallery/102.jpg" alt="">
-        <img src="./images/gallery/103.jpg" alt="">
-      </div>
-      <div class="img-line">
-        <img src="./images/gallery/201.jpg" alt="">
-        <img src="./images/gallery/202.jpg" alt="">
-        <img src="./images/gallery/203.jpg" alt="">
-        <img src="./images/gallery/204.jpg" alt="">
-        <img src="./images/gallery/205.jpg" alt="">
-      </div>
-      <div class="img-line">
-        <img src="./images/gallery/301.jpg" alt="">
-        <img src="./images/gallery/302.jpg" alt="">
-        <img src="./images/gallery/303.jpg" alt="">
-      </div>
-      <div class="img-line">
-        <img src="./images/gallery/401.jpg" alt="">
-        <img src="./images/gallery/402.jpg" alt="">
-        <img src="./images/gallery/403.png" alt="">
-      </div>
-      <div class="img-line">
-        <img src="./images/gallery/501.png" alt="">
-        <img src="./images/gallery/502.jpg" alt="">
-      </div>
-      <div class="img-line">
-        <img src="./images/gallery/601.jpg" alt="">
-        <img src="./images/gallery/602.jpg" alt="">
-        <img src="./images/gallery/603.jpg" alt="">
-      </div>
-      <div class="img-line">
-        <img src="./images/gallery/701.jpg" alt="">
-        <img src="./images/gallery/702.jpg" alt="">
+  <section class="gallery">
+    <div class="gallery-wrap">
+      <div class="line-wrap">
+        <div class="img-wrap line1">
+          <div class="img-line">
+            <img class="gal-img" src="./images/gallery/101.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/102.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/103.jpg" alt="">
+            <div class="img-modal"></div>
+          </div>
+        </div>  
+        <div class="img-wrap line2">
+          <div class="img-line">
+            <img class="gal-img" src="./images/gallery/201.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/202.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/203.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/204.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/205.jpg" alt="">
+            <div class="img-modal"></div>
+          </div>
+        </div>
+        <div class="img-wrap line3">
+          <div class="img-line">
+            <img class="gal-img" src="./images/gallery/301.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/302.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/303.jpg" alt="">
+            <div class="img-modal"></div>
+          </div>
+        </div>
+        <div class="img-wrap line4">
+          <div class="img-line">
+            <img class="gal-img" src="./images/gallery/401.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/402.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/403.png" alt="">
+            <div class="img-modal"></div>
+          </div>
+        </div>
+        <div class="img-wrap line5">
+          <div class="img-line">
+            <img class="gal-img" src="./images/gallery/501.png" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/502.jpg" alt="">
+            <div class="img-modal"></div>
+          </div>
+        </div>
+        <div class="img-wrap line6">
+          <div class="img-line">
+            <img class="gal-img" src="./images/gallery/601.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/602.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/603.jpg" alt="">
+            <div class="img-modal"></div>
+          </div>
+        </div>
+        <div class="img-wrap line7">
+          <div class="img-line">
+            <img class="gal-img" src="./images/gallery/701.jpg" alt="">
+            <div class="img-modal"></div>
+            <img class="gal-img" src="./images/gallery/702.jpg" alt="">
+            <div class="img-modal"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
   <!-- gallery end -->
+  <div id="cursor-dot">&nbsp;</div>
+  <div id="cursor-bg">&nbsp;</div>
+  <div id="progress"><span>&nbsp;</span></div>
+  <script type="text/javascript" src="./vendor/gsap/gsap.min.js"></script>
 </body>
-
 </html>

@@ -1,45 +1,86 @@
-section#profile {
+section.profile {
     position: fixed;
     width: 1280px;
     display: flex;
     visibility: hidden;
+    opacity: 0;
+    transition: 1s ease-in;
+    transition-delay: 0;
 }
-section#profile > div{
+section.profile > div{
     width: 640px;
+    position: relative;
 }
-section#profile > .left {
+section.profile > .left {
+    padding-top: 80px;
+    opacity: 0;
     color: white; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 1s ease-in;
 }
-section#profile > .left > .title {
+section.profile > .left > .title {
     font-size: 80px;
     font-family: 'Tinos', serif;
     margin-bottom: 60px;
 }
-section#profile > .left >  .sub {
+section.profile > .left >  .sub {
     font-size: 28px;
     margin-bottom: 40px;
 }
-section#profile > .left > .con-1{
+section.profile > .left > .con-1{
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-section#profile > .right > .img-wrap {
+section.profile > .right > .img-wrap {
+    width: 0px; height: 0px;
+    margin: 50px;
+    /* border: 1px solid rgba(255, 255, 255, 0.5); */
+    border-radius: 50%;
+    overflow: hidden;
+    transform-origin: 50% 50%;
+    transition: 1s ease-in;
+    position: absolute;
+    left: 39%; top: 41%; transform: translate(-50%, -50%);
+    opacity: 0;
+ }
+section.profile > .right > .img-wrap > img {
+    width: 500px; height: 500px;
+    /* border: 1px solid rgba(255, 255, 255, 0.5); */
+    border-radius: 50%;
+    overflow: hidden;
+    transform-origin: 50% 50%;
+}
+
+/* 액티브 클래스 추가 */
+section.profile.active {
+    position: fixed;
+    width: 1280px;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    /* transition-delay: 1s; */
+}
+section.profile.active > .right > .img-wrap {
     width: 500px; height: 500px;
     margin: 50px;
     /* border: 1px solid rgba(255, 255, 255, 0.5); */
     border-radius: 50%;
     overflow: hidden;
     transform-origin: 50% 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in;
+    opacity: 1;
  }
-section#profile > .right > .img-wrap > img {
-    width: 500px; height: 500px;
-    /* border: 1px solid rgba(255, 255, 255, 0.5); */
-    border-radius: 50%;
-    overflow: hidden;
-    transform-origin: 50% 50%;
+ section.profile.active > .left {
+    padding-top: 0px;
+    opacity: 1;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s ease-in;
 }

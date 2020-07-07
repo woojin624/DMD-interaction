@@ -1,14 +1,81 @@
-section#gallery{
+section.gallery{
     position: fixed; top: 0; left: 0;  width: 100%; 
-    height: 100%; visibility: hidden;
-}
-section#gallery > .img-wrap {
-    position: absolute; left: 50%; transform: translate(-50%, 0);
-    display: flex; flex-direction: column;
-    justify-content: center; align-items: center;
-}
-section#gallery > .img-wrap > .img-line {
-    width: 900px; height: 240px; margin: 10px; display: flex; align-items: center; justify-content: center;
+    height: 100%; visibility: hidden; opacity: 0; transition: 1s
 }
 
-section#gallery > .img-wrap > .img-line > img {height: 240px; margin: 10px;}
+section.gallery > .gallery-wrap {
+    transform-style: preserve-3d; perspective: 2000px;
+    width: 1480px; height:1480px; position: absolute; top: 50%; left: 50%;
+    transform: translate3d(-50%, -50%, 0); transition: .4s ease-in; opacity: 1;
+}
+
+section.gallery > .gallery-wrap > .line-wrap {
+    width: 1400px; height: 1400px; background: none; border-radius: 50%;
+    position: absolute; top: 50%; left: 50%; 
+    transform-style: preserve-3d; transition: 0.5s ease;
+    transform: translate3d(-50%, -50%, 0) rotateX(90deg) rotateZ(00deg);
+}
+
+section.gallery > .gallery-wrap > .line-wrap > .img-wrap {
+    width: 1400px; height: 1400px; background: none; border-radius: 50%;
+    position: absolute; top: 0%; left:50%; 
+    transform-style: preserve-3d; transition: .5s; opacity: 0;
+}
+
+section.gallery > .gallery-wrap > .line-wrap > .line1 {transform: translate3d(-50%, 0, 0) rotateX(0deg);}
+section.gallery > .gallery-wrap > .line-wrap > .line2 {transform: translate3d(-50%, 0, 0) rotateX(-20deg);}
+section.gallery > .gallery-wrap > .line-wrap > .line3 {transform: translate3d(-50%, 0, 0) rotateX(-40deg);}
+section.gallery > .gallery-wrap > .line-wrap > .line4 {transform: translate3d(-50%, 0, 0) rotateX(-60deg);}
+section.gallery > .gallery-wrap > .line-wrap > .line5 {transform: translate3d(-50%, 0, 0) rotateX(-80deg);}
+section.gallery > .gallery-wrap > .line-wrap > .line6 {transform: translate3d(-50%, 0, 0) rotateX(-100deg);}
+section.gallery > .gallery-wrap > .line-wrap > .line7 {transform: translate3d(-50%, 0, 0) rotateX(-120deg);}
+
+section.gallery > .gallery-wrap > .line-wrap > .img-wrap > .img-line {
+    position: absolute; width: 800px; height: 190px; margin: 10px;  top:90%; left: 50%; transform:translate(-50%, -50%) rotateX(-90deg);
+    margin: 50px auto; transition: 0.5s; transform-style: preserve-3d;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.line-wrap > .img-wrap > .img-line > .gal-img {height: 190px; margin: 10px; cursor: pointer; transition: 0.5s ease-in-out;}
+.line-wrap > .img-wrap > .img-line > .gal-img:hover {border: 2px solid white;}
+ 
+section.gallery.active{
+    position: fixed; top: 0; left: 0;  width: 100%; 
+    height: 100%; visibility: visible; opacity: 1;
+}
+section.gallery.active > .gallery-wrap > .line-wrap > .img-wrap {
+    opacity: 1; transition: 0.5s;
+}
+section.gallery.active > .gallery-wrap > .line-wrap > .line1 {transform: translate3d(-50%, 0, 0) rotateX(0deg);}
+section.gallery.active > .gallery-wrap > .line-wrap > .line2 {transform: translate3d(-50%, 0, 0) rotateX(-20deg);}
+section.gallery.active > .gallery-wrap > .line-wrap > .line3 {transform: translate3d(-50%, 0, 0) rotateX(-40deg);}
+section.gallery.active > .gallery-wrap > .line-wrap > .line4 {transform: translate3d(-50%, 0, 0) rotateX(-60deg);}
+section.gallery.active > .gallery-wrap > .line-wrap > .line5 {transform: translate3d(-50%, 0, 0) rotateX(-80deg);}
+section.gallery.active > .gallery-wrap > .line-wrap > .line6 {transform: translate3d(-50%, 0, 0) rotateX(-100deg);}
+section.gallery.active > .gallery-wrap > .line-wrap > .line7 {transform: translate3d(-50%, 0, 0) rotateX(-120deg);}
+
+
+section.gallery.active > .gallery-wrap > .line-wrap{
+    animation: moveGall 15s linear infinite alternate;
+}
+@keyframes moveGall{
+    0%{
+        transform: translate3d(-50%, -50%, 0) rotateX(90deg) rotateZ(00deg);
+    }
+	100% {
+    	transform: translate3d(-50%, -50%, 0) rotateX(210deg) rotateZ(00deg);
+    }
+}
+section.gallery.active > .gallery-wrap > .line-wrap > .img-wrap > .img-line > .gal-img.clickedGallery {
+    position: fixed; z-index: 10; height: 460px; border: 2px solid white;
+    /* left: 50%; top: 50%; transform: translate(-50%, -50%); */
+}
+/* section.gallery.active > .gallery-wrap > .line-wrap > .img-wrap > .img-line > .gal-img.clickedGallery{
+    background: black; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0;
+} */
+
+section.gallery.active > .gallery-wrap > .line-wrap > .img-wrap > .img-line > .img-modal {
+    width: 4000px; height: 4000px; position: fixed; 
+    z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
